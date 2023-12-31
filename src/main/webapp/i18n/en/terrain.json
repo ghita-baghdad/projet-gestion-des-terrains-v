@@ -1,0 +1,37 @@
+{
+  "appApp": {
+    "terrain": {
+      "home": {
+        "title": "Terrains",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Terrain",
+        "createOrEditLabel": "Create or edit a Terrain",
+        "notFound": "No Terrains found"
+      },
+      "created": "A new Terrain has been created with identifier {{ param }}",
+      "updated": "A Terrain has been updated with identifier {{ param }}",
+      "deleted": "A Terrain has been deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Terrain {{ id }}?"
+      },
+      "detail": {
+        "title": "Terrain"
+      },
+      "id": "ID",
+      "nomTerrain": "Terrain Name",
+      "photo": "Photo",
+      "adresse": "Address",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "rank": "Rank",
+      "type": "Type",
+      "etat": "State",
+      "description": "Description",
+      "typeSal": "Type Sal",
+      "tarif": "Price",
+      "reservationTerrain": "Reservation Terrain",
+      "nomClub": "Club ",
+      "nomZone": "Zone "
+    }
+  }
+}

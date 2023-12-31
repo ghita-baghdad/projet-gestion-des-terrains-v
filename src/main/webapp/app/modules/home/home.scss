@@ -1,0 +1,45 @@
+/* Adjust the height of the homepage-container as needed */
+.homepage-container {
+  height: 12vh; /* Adjust the height as needed */
+  display: flex;
+  align-items: flex-end; /* Change to 'baseline' or any other value as needed */
+  justify-content: flex-end; /* Change to 'center', 'flex-start', or any other value as needed */
+}
+
+/* home.scss */
+
+.scrolling-text {
+  text-align: center;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #24b24c;
+}
+
+.photo-upload-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame {
+  border: 2px dashed #24b24c;
+  padding: 20px;
+  width: 60%;
+  height: 10px; /* Adjust the height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add any additional styles as needed for the file input */
+.photo-frame input {
+  display: none;
+}
+
+/* Style for when hovering over the photo frame */
+.photo-frame:hover {
+  border-color: #28a745; /* Change color on hover */
+}

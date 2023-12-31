@@ -1,0 +1,29 @@
+{
+  "appApp": {
+    "client": {
+      "home": {
+        "title": "Clients",
+        "refreshListLabel": "Refresh List",
+        "createLabel": "Create a new Client",
+        "createOrEditLabel": "Create or Edit a Client",
+        "notFound": "No Clients found"
+      },
+      "created": "A new Client has been created with the ID {{ param }}",
+      "updated": "The Client with ID {{ param }} has been updated",
+      "deleted": "The Client with ID {{ param }} has been deleted",
+      "delete": {
+        "question": "Are you sure you want to delete Client {{ id }}?"
+      },
+      "detail": {
+        "title": "Client"
+      },
+      "id": "ID",
+      "nomClient": "Last Name",
+      "prenom": "First Name",
+      "email": "Email",
+      "password": "Password",
+      "packClient": "Client Pack",
+      "reservation": "Reservation"
+    }
+  }
+}
