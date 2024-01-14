@@ -179,4 +179,12 @@ public class ReservationResource {
             .headers(HeaderUtil.createEntityDeletionAlert(applicationName, true, ENTITY_NAME, id.toString()))
             .build();
     }
+   
+    @GetMapping("/{id}/client-nom")
+    public ResponseEntity<String> getClientNomByReservationId(@PathVariable Long id) {
+        log.debug("REST request to get Client Nom for Reservation: {}", id);
+        String clientNom = reservationRepository.findNomClientByReservationId(id);
+
+        return ResponseEntity.ok(clientNom != null ? clientNom : "");
+    }
 }
