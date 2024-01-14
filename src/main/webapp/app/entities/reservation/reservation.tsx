@@ -12,8 +12,12 @@ import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { getEntities } from './reservation.reducer';
 
 export const Reservation = () => {
-  const dispatch = useAppDispatch();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [dateFilter, setDateFilter] = useState('');
+  const [etatFilter, setEtatFilter] = useState('');
 
+  const dispatch = useAppDispatch();
+  const [clientNoms, setClientNoms] = useState({});
   const pageLocation = useLocation();
   const navigate = useNavigate();
 
@@ -26,6 +30,8 @@ export const Reservation = () => {
     dispatch(
       getEntities({
         sort: `${sortState.sort},${sortState.order}`,
+
+        search: searchTerm,
       }),
     );
   };
@@ -37,7 +43,21 @@ export const Reservation = () => {
       navigate(`${pageLocation.pathname}${endURL}`);
     }
   };
+  useEffect(() => {
+    const fetchClientNames = async () => {
+      await Promise.all(
+        reservationList.map(async reservation => {
+          const clientNomResponse = await fetch(`/api/reservations/${reservation.id}/client-nom`);
 
+          const clientNom = await clientNomResponse.text();
+
+          setClientNoms(prevState => ({ ...prevState, [reservation.id]: clientNom }));
+        }),
+      );
+    };
+
+    fetchClientNames();
+  }, [reservationList]);
   useEffect(() => {
     sortEntities();
   }, [sortState.order, sortState.sort]);
@@ -64,10 +84,28 @@ export const Reservation = () => {
     }
   };
 
+  const filteredReservationList = reservationList.filter(reservation => {
+    const searchLower = searchTerm.toLowerCase();
+    return (
+      reservation.date.toLowerCase().includes(searchLower) ||
+      reservation.etat.toLowerCase().includes(searchLower) ||
+      clientNoms[reservation.id].toLowerCase().includes(searchLower)
+    );
+  });
+
   return (
     <div>
       <h2 id="reservation-heading" data-cy="ReservationHeading">
         <Translate contentKey="appApp.reservation.home.title">Reservations</Translate>
+        <div className="me-2">
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={e => setSearchTerm(e.target.value)}
+            className="form-control form-control-sm"
+          />
+        </div>
         <div className="d-flex justify-content-end">
           <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
@@ -81,7 +119,7 @@ export const Reservation = () => {
         </div>
       </h2>
       <div className="table-responsive">
-        {reservationList && reservationList.length > 0 ? (
+        {filteredReservationList && filteredReservationList.length > 0 ? (
           <Table responsive>
             <thead>
               <tr>
@@ -94,15 +132,16 @@ export const Reservation = () => {
                 <th>
                   <Translate contentKey="appApp.reservation.nomClient">Cient</Translate>
                 </th>
+
                 <th />
               </tr>
             </thead>
             <tbody>
-              {reservationList.map((reservation, i) => (
+              {filteredReservationList.map((reservation, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
                   <td>{reservation.date ? <TextFormat type="date" value={reservation.date} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{reservation.etat}</td>
-                  <td>{reservation.nomClient ? <Link to={`/client/${reservation.nomClient.id}`}>Info Client</Link> : ''}</td>
+                  <td>{clientNoms[reservation.id]}</td>
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`/reservation/${reservation.id}`} color="info" size="sm" data-cy="entityDetailsButton">
