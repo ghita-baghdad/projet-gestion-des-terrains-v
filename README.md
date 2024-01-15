@@ -1,5 +1,5 @@
 # Introduction 
-Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre application vise à simplifier la gestion et la réservation de terrains de sport, en offrant une plateforme conviviale et efficace pour les clients, les clubs sportifs et les administrateurs.
+Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre application vise à simplifier la gestion et la réservation de terrains de sport, en offrant une plateforme conviviale et efficace pour les clients, les clubs sportifs et les administrateurs.Elle s'agit d'une application monolithique, cela signifie que toutes les fonctionnalités et composants de l'application sont regroupés en un seul ensemble.
 
 # Les entités clés du projet :
 -Client : Représente les utilisateurs de l'application avec des informations telles que le nom, prénom, email et mot de passe.
@@ -19,6 +19,16 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 -Terrain : Détaille les caractéristiques des terrains, telles que le nom, l'adresse, la localisation géographique, le rang, le type, l'état, la description, le tarif, etc.
 
 -Ville et Zone : Structurent les terrains en fonction de la géographie, avec la ville contenant des zones, et chaque zone comprenant plusieurs terrains.
+
+# Les technologies  utilisées :
+## JHipster
+## Spring Boot : Utilisé pour développer le backend du projet.
+## React : Utilisé pour développer le frontend du projet.
+## Hibernate : Pour la gestion des bases de données.
+## Base de données : H2.
+## Maven : Pour la gestion des dépendances et la construction du projet.
+## Docker : Pour la conteneurisation des applications.
+## SonarCloud : Outil d'analyse du code dans notre projet JHipster.
 
 # Diagramme de classe (jhipster-jdl):
 <img width="500" alt="image" src="https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/552727ce-b72b-4963-a4c4-991edef9b057">
