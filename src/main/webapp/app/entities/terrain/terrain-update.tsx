@@ -125,13 +125,13 @@ export const TerrainUpdate = () => {
                 data-cy="photo"
                 openActionLabel={translate('entity.action.open')}
               />
-              <ValidatedField
+               <ValidatedField
                 label={translate('appApp.terrain.latitude')}
                 id="terrain-latitude"
                 name="latitude"
                 data-cy="latitude"
                 type="text"
-                validate={{ required: true, pattern: { value: /^\d+(\.\d{1,6})?$/, message: translate('entity.validation.pattern') } }}
+                validate={{ required: true }}
               />
               <ValidatedField
                 label={translate('appApp.terrain.longitude')}
@@ -139,7 +139,7 @@ export const TerrainUpdate = () => {
                 name="longitude"
                 data-cy="longitude"
                 type="text"
-                validate={{ required: true, pattern: { value: /^\d+(\.\d{1,6})?$/, message: translate('entity.validation.pattern') } }}
+                validate={{ required: true }}
               />
               <ValidatedField label={translate('appApp.terrain.rank')} id="terrain-rank" name="rank" data-cy="rank" type="text" />
               <ValidatedField label={translate('appApp.terrain.type')} id="terrain-type" name="type" data-cy="type" type="text" />
