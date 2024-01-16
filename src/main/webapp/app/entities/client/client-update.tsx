@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
+import { Button, Row, Col } from 'reactstrap';
+import { Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
-import { useAppDispatch, useAppSelector } from 'app/config/store';
-
-import { IClient } from 'app/shared/model/client.model';
 import { getEntity, updateEntity, createEntity, reset } from './client.reducer';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 export const ClientUpdate = () => {
   const dispatch = useAppDispatch();
@@ -42,7 +38,6 @@ export const ClientUpdate = () => {
     }
   }, [updateSuccess]);
 
-  // eslint-disable-next-line complexity
   const saveEntity = values => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
@@ -98,8 +93,16 @@ export const ClientUpdate = () => {
                 name="nomClient"
                 data-cy="nomClient"
                 type="text"
+                validate={{ required: true, maxLength: { value: 50, message: translate('entity.validation.maxlength', { max: 50 }) } }}
               />
-              <ValidatedField label={translate('appApp.client.prenom')} id="client-prenom" name="prenom" data-cy="prenom" type="text" />
+              <ValidatedField
+                label={translate('appApp.client.prenom')}
+                id="client-prenom"
+                name="prenom"
+                data-cy="prenom"
+                type="text"
+                validate={{ required: true, maxLength: { value: 50, message: translate('entity.validation.maxlength', { max: 50 }) } }}
+              />
               <ValidatedField label={translate('appApp.client.email')} id="client-email" name="email" data-cy="email" type="text" />
               <ValidatedField
                 label={translate('appApp.client.password')}
@@ -107,6 +110,7 @@ export const ClientUpdate = () => {
                 name="password"
                 data-cy="password"
                 type="text"
+                validate={{ required: true, minLength: { value: 6, message: translate('entity.validation.minlength', { min: 6 }) } }}
               />
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/client" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
