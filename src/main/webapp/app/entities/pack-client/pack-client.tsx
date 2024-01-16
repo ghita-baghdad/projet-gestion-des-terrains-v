@@ -85,9 +85,6 @@ export const PackClient = () => {
           <Table responsive>
             <thead>
               <tr>
-                <th className="hand" onClick={sort('id')}>
-                  <Translate contentKey="appApp.packClient.id">ID</Translate> <FontAwesomeIcon icon={getSortIconByFieldName('id')} />
-                </th>
                 <th className="hand" onClick={sort('date')}>
                   <Translate contentKey="appApp.packClient.date">Date</Translate> <FontAwesomeIcon icon={getSortIconByFieldName('date')} />
                 </th>
@@ -103,11 +100,6 @@ export const PackClient = () => {
             <tbody>
               {packClientList.map((packClient, i) => (
                 <tr key={`entity-${i}`} data-cy="entityTable">
-                  <td>
-                    <Button tag={Link} to={`/pack-client/${packClient.id}`} color="link" size="sm">
-                      {packClient.id}
-                    </Button>
-                  </td>
                   <td>{packClient.date ? <TextFormat type="date" value={packClient.date} format={APP_DATE_FORMAT} /> : null}</td>
                   <td>{packClient.nomClient ? <Link to={`/client/${packClient.nomClient.id}`}>Info Client</Link> : ''}</td>
                   <td>{packClient.nomPack ? <Link to={`/pack/${packClient.nomPack.id}`}>Info Pack</Link> : ''}</td>
