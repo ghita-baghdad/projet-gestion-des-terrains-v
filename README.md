@@ -39,10 +39,6 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 ```bash
 docker pull ghitabaghdad12670/gestiondesterrains:latest
 ```
-# L'analyse du projet :
-  ![WhatsApp Image 2024-01-15 à 13 58 01_82893b84](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/4ac6af4b-62d5-46a7-9625-a460ea698376)
-
-
 # Diagramme de classe (jhipster-jdl):
 <img width="500" alt="image" src="https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/552727ce-b72b-4963-a4c4-991edef9b057">
 
@@ -75,6 +71,10 @@ https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/
 # Accees a l'interface via docker :
 
 ![Capture d’écran (1235)](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/b8ecba31-4106-46b8-91f1-54f97b5880fa)
+
+# L'analyse du projet :
+
+  ![WhatsApp Image 2024-01-15 à 13 58 01_82893b84](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/4ac6af4b-62d5-46a7-9625-a460ea698376)
 
 
 
