@@ -96,11 +96,25 @@ export const ZoneUpdate = () => {
                   readOnly
                   id="zone-id"
                   label={translate('global.field.id')}
-                  validate={{ required: true }}
+                  validate={{ required: 'Please enter the zone ID.' }}
                 />
               ) : null}
-              <ValidatedField label={translate('appApp.zone.nomZone')} id="zone-nomZone" name="nomZone" data-cy="nomZone" type="text" />
-              <ValidatedField id="zone-nomVille" name="nomVille" data-cy="nomVille" label={translate('appApp.zone.nomVille')} type="select">
+              <ValidatedField
+                label={translate('appApp.zone.nomZone')}
+                id="zone-nomZone"
+                name="nomZone"
+                data-cy="nomZone"
+                type="text"
+                validate={{ required: 'Please enter the zone name.' }}
+              />
+              <ValidatedField
+                id="zone-nomVille"
+                name="nomVille"
+                data-cy="nomVille"
+                label={translate('appApp.zone.nomVille')}
+                type="select"
+                validate={{ required: 'Please select a city.' }}
+              >
                 <option value="" key="0" />
                 {villes
                   ? villes.map(otherEntity => (
