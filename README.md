@@ -34,6 +34,10 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 - ./mvnw : Pour lancer l'application en mode développement.
 - npm start : Pour le démarrage du serveur de développement pour la partie frontend de l'application.
 
+## Pour tirer (pull) l'image Docker depuis le registre, vous pouvez utiliser la commande suivante
+´´´bash
+docker pull ghitabaghdad12670/gestiondesterrains:latest
+´´´
 # L'analyse du projet :
   ![WhatsApp Image 2024-01-15 à 13 58 01_82893b84](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/4ac6af4b-62d5-46a7-9625-a460ea698376)
 
