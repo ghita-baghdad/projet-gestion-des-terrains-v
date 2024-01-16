@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, Translate, translate, ValidatedField, ValidatedForm, ValidatedBlobField } from 'react-jhipster';
+import { Button, Row, Col } from 'reactstrap';
+import { Translate, translate, ValidatedField, ValidatedForm, ValidatedBlobField } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
-import { useAppDispatch, useAppSelector } from 'app/config/store';
-
-import { IClub } from 'app/shared/model/club.model';
-import { getEntities as getClubs } from 'app/entities/club/club.reducer';
-import { IZone } from 'app/shared/model/zone.model';
-import { getEntities as getZones } from 'app/entities/zone/zone.reducer';
-import { ITerrain } from 'app/shared/model/terrain.model';
 import { getEntity, updateEntity, createEntity, reset } from './terrain.reducer';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { getEntities as getClubs } from 'app/entities/club/club.reducer';
+import { getEntities as getZones } from 'app/entities/zone/zone.reducer';
 
 export const TerrainUpdate = () => {
   const dispatch = useAppDispatch();
@@ -51,7 +45,6 @@ export const TerrainUpdate = () => {
     }
   }, [updateSuccess]);
 
-  // eslint-disable-next-line complexity
   const saveEntity = values => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
@@ -120,6 +113,10 @@ export const TerrainUpdate = () => {
                 name="nomTerrain"
                 data-cy="nomTerrain"
                 type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                  maxLength: { value: 50, message: translate('entity.validation.maxlength', { max: 50 }) },
+                }}
               />
               <ValidatedBlobField
                 label={translate('appApp.terrain.photo')}
@@ -134,6 +131,7 @@ export const TerrainUpdate = () => {
                 name="latitude"
                 data-cy="latitude"
                 type="text"
+                validate={{ required: true, pattern: { value: /^\d+(\.\d{1,6})?$/, message: translate('entity.validation.pattern') } }}
               />
               <ValidatedField
                 label={translate('appApp.terrain.longitude')}
@@ -141,6 +139,7 @@ export const TerrainUpdate = () => {
                 name="longitude"
                 data-cy="longitude"
                 type="text"
+                validate={{ required: true, pattern: { value: /^\d+(\.\d{1,6})?$/, message: translate('entity.validation.pattern') } }}
               />
               <ValidatedField label={translate('appApp.terrain.rank')} id="terrain-rank" name="rank" data-cy="rank" type="text" />
               <ValidatedField label={translate('appApp.terrain.type')} id="terrain-type" name="type" data-cy="type" type="text" />
