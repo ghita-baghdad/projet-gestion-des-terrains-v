@@ -63,6 +63,7 @@ https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/
 
 # Accees a l'interface via docker :
 
+![Capture d’écran (1235)](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/b8ecba31-4106-46b8-91f1-54f97b5880fa)
 
 
 
