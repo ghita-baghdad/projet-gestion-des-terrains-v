@@ -129,13 +129,6 @@ export const TerrainUpdate = () => {
                 openActionLabel={translate('entity.action.open')}
               />
               <ValidatedField
-                label={translate('appApp.terrain.adresse')}
-                id="terrain-adresse"
-                name="adresse"
-                data-cy="adresse"
-                type="text"
-              />
-              <ValidatedField
                 label={translate('appApp.terrain.latitude')}
                 id="terrain-latitude"
                 name="latitude"
