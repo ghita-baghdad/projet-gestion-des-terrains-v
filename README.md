@@ -44,6 +44,12 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 # certains champs doivent être remplis pour soumettre le formulaire avec succès
 
 ![image](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/91f51629-830e-4280-a375-c771147be007)
+# Authentification  :
+Vous pouvez utiliser : 
+-username : admin@admin
+-password : admin@admin
+
+https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/00e144ba-a78f-4f03-8ddf-7fef22a0cc7f
 
 # Map
 
@@ -64,6 +70,7 @@ https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/
 # Accees a l'interface via docker :
 
 ![Capture d’écran (1235)](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/b8ecba31-4106-46b8-91f1-54f97b5880fa)
+
 
 
 
