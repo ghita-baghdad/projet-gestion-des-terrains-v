@@ -1,15 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Button, Row, Col, FormText } from 'reactstrap';
-import { isNumber, Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
+import { Button, Row, Col } from 'reactstrap';
+import { Translate, translate, ValidatedField, ValidatedForm } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
-import { mapIdList } from 'app/shared/util/entity-utils';
-import { useAppDispatch, useAppSelector } from 'app/config/store';
-
-import { IVille } from 'app/shared/model/ville.model';
 import { getEntity, updateEntity, createEntity, reset } from './ville.reducer';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
 
 export const VilleUpdate = () => {
   const dispatch = useAppDispatch();
@@ -42,7 +38,6 @@ export const VilleUpdate = () => {
     }
   }, [updateSuccess]);
 
-  // eslint-disable-next-line complexity
   const saveEntity = values => {
     if (values.id !== undefined && typeof values.id !== 'number') {
       values.id = Number(values.id);
@@ -98,6 +93,11 @@ export const VilleUpdate = () => {
                 name="nomVille"
                 data-cy="nomVille"
                 type="text"
+                validate={{
+                  required: { value: true, message: translate('entity.validation.required') },
+                  maxLength: { value: 50, message: translate('entity.validation.maxlength', { max: 50 }) },
+                  // Add more validation rules as needed
+                }}
               />
               <Button tag={Link} id="cancel-save" data-cy="entityCreateCancelButton" to="/ville" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
