@@ -149,7 +149,7 @@ export const Terrain = () => {
                   <FontAwesomeIcon icon={getSortIconByFieldName('description')} />
                 </th>
                 <th className="hand" onClick={sort('typeSal')}>
-                  <Translate contentKey="appApp.terrain.typeSal">Type Sal</Translate>{' '}
+                  <Translate contentKey="appApp.terrain.typeSal">Type Sol</Translate>{' '}
                   <FontAwesomeIcon icon={getSortIconByFieldName('typeSal')} />
                 </th>
                 <th className="hand" onClick={sort('tarif')}>
