@@ -28,7 +28,7 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 - Base de données : H2.
 - Maven : Pour la gestion des dépendances et la construction du projet.
 - Docker : Pour la conteneurisation des applications.
-- SonarCloud : Outil d'analyse du code dans notre projet JHipster.
+
 # Les commandes utilisées :
 - mvn clean install : Pour nettoyer, compiler et installer le projet .
 - ./mvnw : Pour lancer l'application en mode développement.
