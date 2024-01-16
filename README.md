@@ -41,6 +41,10 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 # Diagramme de classe (jhipster-jdl):
 <img width="500" alt="image" src="https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147450314/552727ce-b72b-4963-a4c4-991edef9b057">
 
+# certains champs doivent être remplis pour soumettre le formulaire avec succès
+
+![image](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/91f51629-830e-4280-a375-c771147be007)
+
 # Map
 
 https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/a128e9f0-8daa-4a7c-94d4-d9eebdf4f5a4
