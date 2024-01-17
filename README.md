@@ -28,6 +28,7 @@ Bienvenue dans notre projet JHipster dédié à la gestion des terrains ! Notre 
 - Base de données : H2.
 - Maven : Pour la gestion des dépendances et la construction du projet.
 - Docker : Pour la conteneurisation des applications.
+- Sonarqube : L'inspection de la qualité du code
 
 # Les commandes utilisées :
 - mvn clean install : Pour nettoyer, compiler et installer le projet .
@@ -68,11 +69,17 @@ https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/
 
 https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/5b40eaec-e378-4cc6-86a8-cc0c4f2a64e7
 
-# Accees a l'interface via docker :
+# Accéder à l'interface via docker :
 
 ![Capture d’écran (1235)](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/b8ecba31-4106-46b8-91f1-54f97b5880fa)
 
+## L'analyse via sonar :
+- L'interface des resultats principale :
+![SONAR](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/934afbd2-6870-443d-968a-f480c700cc20)
 
+- Autre resultats :
+![sonarr](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/8897fd44-f8c2-4af9-8346-8b66837c57bb)
+![coverage](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/ae76c80c-ea1a-4792-844c-b48a01eac615)
 
 
 
