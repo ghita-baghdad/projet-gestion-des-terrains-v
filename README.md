@@ -73,15 +73,5 @@ https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/
 
 ![Capture d’écran (1235)](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/b8ecba31-4106-46b8-91f1-54f97b5880fa)
 
-## L'analyse via sonar :
-- L'interface des resultats principale :
-
-![SONAR1](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/a29b68cc-704a-4085-8533-18123934b102)
-
-- Autre resultats :
-![sonarr](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/8897fd44-f8c2-4af9-8346-8b66837c57bb)
-![coverage](https://github.com/ghita-baghdad/projet-gestion-des-terrains-v/assets/147449053/ae76c80c-ea1a-4792-844c-b48a01eac615)
-
-
 
 
